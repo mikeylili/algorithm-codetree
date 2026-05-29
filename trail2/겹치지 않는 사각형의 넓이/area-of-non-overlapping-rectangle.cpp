@@ -5,14 +5,14 @@ bool arr[2001][2001] = {0};
 void paint1(int x1, int y1, int x2, int y2){
     for (int i = x1; i < x2; i++){
         for (int j = y1; j < y2; j++){
-            arr[j][i] = true;
+            arr[i][j] = true;
         }
     }
 }
 void paint2(int x1, int y1, int x2, int y2){
     for (int i = x1; i < x2; i++){
         for (int j = y1; j < y2; j++){
-            arr[j][i] = false;
+            arr[i][j] = false;
         }
     }
 }
@@ -41,7 +41,7 @@ int main() {
     int area = 0;
     for (int i = 0; i < 2001; i++){
         for (int j = 0; j < 2001; j++){
-            if (arr[j][i] == true) area++;
+            if (arr[i][j] == true) area++;
         }
     }
     cout << area;
