@@ -1,18 +1,18 @@
 #include <iostream>
 using namespace std;
 
-int arr[2001][2001] = {0};
+bool arr[2001][2001] = {0};
 void paint1(int x1, int y1, int x2, int y2){
     for (int i = x1; i < x2; i++){
         for (int j = y1; j < y2; j++){
-            arr[j][i] = 1;
+            arr[j][i] = true;
         }
     }
 }
 void paint2(int x1, int y1, int x2, int y2){
     for (int i = x1; i < x2; i++){
         for (int j = y1; j < y2; j++){
-            arr[j][i] = 2;
+            arr[j][i] = false;
         }
     }
 }
@@ -41,7 +41,7 @@ int main() {
     int area = 0;
     for (int i = 0; i < 2001; i++){
         for (int j = 0; j < 2001; j++){
-            if (arr[j][i] == 1) area++;
+            if (arr[j][i] == true) area++;
         }
     }
     cout << area;
