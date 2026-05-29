@@ -43,8 +43,8 @@ int main() {
     }
     for (int i = 0; i < 200002; i++){
         if (tile[i] == 'w') w++;
-        if (tile[i] == 'b') b++;
-        if (tile[i] == 'g') g++;
+        else if (tile[i] == 'b') b++;
+        else if (tile[i] == 'g') g++;
     }
     cout << w <<" " << b << " " << g;
 
