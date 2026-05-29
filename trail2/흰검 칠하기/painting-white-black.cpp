@@ -22,6 +22,7 @@ int main() {
     for (int i = 0; i < n; i++){
         if (dir[i] == 'L'){
             for (int j = 0; j < x[i]; j++){
+                if (tile[p] == 'g'){p--;continue;}
                 tile[p] = 'w';
                 wntile[p] += 1;
                 if (wntile[p] >= 2 && bntile[p] >= 2) tile[p] = 'g';
@@ -31,6 +32,7 @@ int main() {
         }
         if (dir[i] == 'R'){
             for (int j = 0; j < x[i]; j++){
+                if (tile[p] == 'g'){p++;continue;}
                 tile[p] = 'b';
                 bntile[p] += 1;
                 if (wntile[p] >= 2 && bntile[p] >= 2) tile[p] = 'g';
