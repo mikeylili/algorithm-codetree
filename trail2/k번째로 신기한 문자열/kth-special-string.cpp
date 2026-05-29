@@ -14,7 +14,7 @@ int main() {
     for (int i = 0; i < N; i++){
         string S;
         cin >> S;
-        if (S.starts_with(T)) {AS[s] = S; s++;}
+        if (S.rfind(T, 0) == 0) {AS[s] = S; s++;}
     }
     sort(AS, AS+s);
     cout << AS[K-1];
