@@ -15,7 +15,7 @@ int main() {
 
     // Please write your code here.
     int w = 0, b = 0, g = 0;
-    char tile[200002];
+    char tile[200002] = {0};
     int wntile[200002] = {0};
     int bntile[200002] = {0};
     int p = 100000;
