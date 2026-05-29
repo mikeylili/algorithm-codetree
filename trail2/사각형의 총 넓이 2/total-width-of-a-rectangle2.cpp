@@ -1,12 +1,12 @@
 #include <iostream>
 using namespace std;
 
+int arr[201][201] = {0};
 int main() {
     // Please write your code here.
     int x1, x2, y1, y2;
     int N;
     cin >> N;
-    int arr[1001][1001] = {0};
     int offset = 100;
     for (int i = 0; i < N; i++){
         cin >> x1 >> y1 >> x2 >> y2;
